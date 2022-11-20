@@ -1,0 +1,12 @@
+.button{
+    padding: 0.5rem 2.5rem;
+    background-color: rgb(59, 59, 59);
+    width: fit-content;
+    color: lightgray;
+    cursor: pointer;
+}
+.ghost-button{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './App.css';
+import MainSection from './templates/MainSection';
+import MemberSection from './templates/MemberSection';
+import PastSection from './templates/PastSection';
 
 function App() {
   const [seeAllOrganizer,setSeeAllOrganizer] = useState(false)
@@ -59,25 +62,7 @@ function App() {
     </div>
     <div className='container'>
       <div className="main-section">
-        <img src="" width="250px" height="250px"/>
-        <div className="main-desc">
-          <h2>Hacktiv8 Meetup</h2>
-          <div className='list'>
-            <div className="label">
-              <span>Location</span>
-              <span>Members</span>
-              <span>Organizers</span>
-            </div>
-            <div className="data">
-              <span>Jakarta, Indonesia</span>
-              <span>1,078</span>
-              <span>Adhy Wiranata</span>
-            </div>
-          </div>
-          <div className='button'>
-            Join Us
-          </div>
-        </div>
+        <MainSection/>
       </div>
       <div className="content-section">
         <h4>Next Meetup</h4>
@@ -110,47 +95,13 @@ function App() {
               See all
           </a>
         </div>
-        {seeAllOrganizer ? (
-          organizers.map((dt,idx)=>{
-            return (
-              <div key={idx} className="member-section">
-                <img src="" width="50px" height="50px"/>
-                <div className='member-details'>
-                  <b>{dt?.title}</b>
-                  <div className='detail'>
-                    <span>{dt?.name}</span>
-                  </div>
-                </div>
-              </div>
-          )})
-        ):(
-          <div className="member-section">
-              <img src="" width="50px" height="50px"/>
-              <div className='member-details'>
-                <b>Organizers</b>
-                <div className='detail'>
-                  <span>Adhy WIranata</span>
-                  <span>{organizers?.length-1} others.</span>
-                </div>
-              </div>
-            </div>
-        )}
+        <MemberSection showMore={seeAllOrganizer} organizers={organizers}/>
         <div className='see-more'>
           <h4>Past Meetups</h4>
           <a href="#">See all</a>
         </div>
         <div className='past-section'>
-          {pasts.map((dt,idx)=>{
-            return (
-              <div key={idx} className='past'>
-                <b>{dt?.date}</b>
-                <hr/>
-                <b>{dt?.desc}</b>
-                <span><b>{dt?.visit}</b> went</span>
-                <div className='button'>View</div>
-              </div>
-            )
-          })}
+          <PastSection pasts={pasts}/>
         </div>
       </div>
     </div>

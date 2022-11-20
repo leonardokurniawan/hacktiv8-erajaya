@@ -1,0 +1,9 @@
+.member-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .member-details > .detail{
+    display: flex;
+    gap:2rem;
+  }

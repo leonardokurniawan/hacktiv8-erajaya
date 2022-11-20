@@ -1,0 +1,14 @@
+.member-img{
+    background-color: gray;
+    border-radius: 100%;
+  }
+.member-card{
+    
+  display: flex;
+  background-color: lightgray;
+  padding: 1rem 1rem;
+  margin: 1rem;;
+  gap:1rem;
+  align-items: center;
+  border-radius: 4px;
+}
