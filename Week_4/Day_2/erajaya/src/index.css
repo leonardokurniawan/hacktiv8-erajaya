@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font: 400 16px 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Maven Pro', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main > .carousel-root > .carousel > .control-dots {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 94% !important;
+  left: 3%;
+  bottom: 0.8em !important;
+  top: auto !important;
+  padding: 0px 6% !important;
+}
+.news > .carousel-root > .carousel > .control-dots {
+  bottom: 0px !important;
+  margin: 0px 0px -5px 0px !important;
+}
+.arrow {
+  position: relative;
+}
+.arrow:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 6px;
+  background: url('../public/icon-long-arrow-right.png') no-repeat center;
+  background-size: contain;
+  -webkit-transform: translate(40%, -50%);
+  transform: translate(40%, -50%);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.arrow:hover::after {
+  left: 55%;
+}
