@@ -21,12 +21,16 @@ const About = () => {
         Assistant at Binus University.
       </span>
       <div className="flex gap-3">
-        <button className="bg-gray-600 p-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
-          <Icons name="linkedin" className="w-3 h-3 fill-current" />
-        </button>
-        <button className="bg-gray-600 p-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
-          <Icons name="github" className="w-3" />
-        </button>
+        <a href='https://www.linkedin.com/in/leonardo-kurniawan' target="_blank" rel="noopener noreferrer">
+          <button className="bg-gray-600 p-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+            <Icons name="linkedin" className="w-3 h-3 fill-current" />
+          </button>
+        </a>
+        <a href='https://github.com/leonardokurniawan' target="_blank" rel="noopener noreferrer">
+          <button className="bg-gray-600 p-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
+            <Icons name="github" className="w-3" />
+          </button>
+        </a>
       </div>
     </div>
   );
